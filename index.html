@@ -2,7 +2,9 @@
 <html>
     <head>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
         <script src="./diver.js"></script>
+        <script src="./piranha.js"></script>
     </head>
 
     <body>
@@ -14,12 +16,16 @@
 
                 <a-asset-item id = "island" src = "./assets/tropical_island/scene.gltf"></a-asset-item>
                 <a-asset-item id = "diver" src = "./assets/diver/diverScene.gltf"></a-asset-item>
+                <a-asset-item id = "piranhas" src = "./assets/piranhas/Piranha.gltf"></a-asset-item>
+
 
             </a-assets>
             
             <a-entity id = "tropical_island"
             gltf-model = "#island"
             ></a-entity>
+
+            <a-entity position="0 0 0" id = "piranhas-in-the-zone" gltf-model = "#piranhas" piranha></a-entity>
 
             <a-entity id = "scuba_diver"
             gltf-model = "#diver"
