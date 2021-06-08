@@ -5,6 +5,7 @@
         <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
         <script src="./diver.js"></script>
         <script src="./piranha.js"></script>
+        <script src="./coin.js"></script>
     </head>
 
     <body>
@@ -17,7 +18,7 @@
                 <a-asset-item id = "island" src = "./assets/tropical_island/scene.gltf"></a-asset-item>
                 <a-asset-item id = "diver" src = "./assets/diver/diverScene.gltf"></a-asset-item>
                 <a-asset-item id = "piranhas" src = "./assets/piranhas/Piranha.gltf"></a-asset-item>
-
+                <a-assets-item id = "bit_coin" src = "./assets/bit_coin"></a-assets-item>
 
             </a-assets>
             
@@ -33,7 +34,13 @@
             position="5 -7 -20"
             rotation="0 90 -20"  
             diver-rotate
-            ></a-entity>
+            dynamic-body =  "mass : 4"
+           ></a-entity>
+
+           <a-entity id = "coin" 
+           gltf-model = "#bit_coin"
+            coin
+           ></a-entity>
 
         </a-scene>
 
